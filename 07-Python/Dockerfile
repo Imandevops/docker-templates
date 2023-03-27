@@ -4,6 +4,10 @@ WORKDIR /app
 
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
+#set timezone tehran
+#set timezone tehran
+RUN  rm -f /etc/localtime && ln -s /usr/share/zoneinfo/Asia/Tehran  /etc/localtime
+
 
 COPY . .
 
