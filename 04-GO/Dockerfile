@@ -19,4 +19,8 @@ EXPOSE 80
 
 RUN chmod +x /sample
 
+#set timezone tehran
+RUN  rm -f /etc/localtime && ln -s /usr/share/zoneinfo/Asia/Tehran  /etc/localtime
+
+
 CMD ["/sample"]
